@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worder — вивчення англійських слів</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Вчи англійські слова у вебверсії Worder: колоди A1–C1, картки та інтервальне повторення.">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" id="top">
+  {% include "components/header.html" %}
+  <main class="web-app" id="web-app">
+    <div class="app-empty" role="status"><h1>Готуємо твої колоди…</h1><p>Завантажуємо англійські слова.</p></div>
+  </main>
+  <noscript><p class="app-empty">Для навчання увімкни JavaScript у браузері.</p></noscript>
+  <script>
+{{ bootstrap }}
+  </script>
+  <script id="study-module" type="module" src="src/scripts/app/main.js"></script>
+</body>
+</html>

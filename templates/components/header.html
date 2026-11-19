@@ -1,0 +1,22 @@
+<div class="top-bar-container">
+  <header class="top-bar">
+    <a class="brand" href="{{ home }}#top">
+<img alt="" class="brand-icon" height="40" src="assets/mascot/bober_face.png" width="40"/>
+<span>Worder</span>
+</a>
+    <nav aria-label="Навігація" class="desktop-nav">
+      {% include "components/navigation-links.html" %}
+    </nav>
+    {{ header_action }}
+    <details class="menu">
+      <summary aria-label="Меню">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</summary>
+      <nav aria-label="Навігація">
+        {% include "components/navigation-links.html" %}
+      </nav>
+    </details>
+  </header>
+</div>

@@ -1,0 +1,137 @@
+.site-footer {
+  --footer-ink: #005ce6;
+  padding: 40px var(--gutter) 24px;
+  background: var(--footer-green);
+  color: var(--footer-ink);
+}
+
+.footer-inner {
+  max-width: calc(var(--page-width) - 96px);
+  margin-inline: auto;
+}
+
+.footer-intro {
+  max-width: 48ch;
+  margin-bottom: 32px;
+}
+
+.footer-intro p {
+  margin: 0;
+  color: var(--footer-ink);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-mascot-wrap {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.footer-mascot {
+  display: block;
+  width: clamp(110px, 13vw, 160px);
+  max-width: 100%;
+  height: auto;
+  margin-inline: 0 auto;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  color: var(--footer-ink);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  padding-block: 8px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 24px;
+  padding-top: 0;
+  color: var(--footer-ink);
+}
+
+.footer-bottom small {
+  font-size: 12px;
+}
+
+@media (min-width: 1100px) {
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--column-gap);
+  }
+
+  .footer-intro {
+    display: contents;
+  }
+
+  .footer-intro .footer-mascot-wrap {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 31ch;
+  }
+
+  .footer-intro p {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 31ch;
+  }
+
+  .footer-nav {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 599px) {
+  .site-footer {
+    padding-top: 32px;
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .footer-column:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-column a {
+    min-height: 44px;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+  }
+}

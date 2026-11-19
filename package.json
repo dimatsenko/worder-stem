@@ -1,0 +1,28 @@
+{
+  "name": "worder-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 scripts/build.py && vite --host 127.0.0.1 --port 8765 --strictPort",
+    "build": "python3 scripts/build.py && vite build && node scripts/copy-public-assets.mjs",
+    "build:site": "npm run build",
+    "preview": "vite preview --host 127.0.0.1 --port 8765 --strictPort",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "format": "prettier --write 'src/scripts/**/*.{js,vue}' '*.{js,json}' 'scripts/*.mjs' 'tests/*.js'",
+    "format:check": "prettier --check 'src/scripts/**/*.{js,vue}' '*.{js,json}' 'scripts/*.mjs' 'tests/*.js'",
+    "check": "npm run build && npm test && npm run format:check && npm run test:browser"
+  },
+  "dependencies": {
+    "vue": "3.5.45"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "vite": "8.3.8",
+    "@vitejs/plugin-vue": "6.0.11",
+    "prettier": "3.10.1"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

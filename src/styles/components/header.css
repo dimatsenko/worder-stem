@@ -1,0 +1,249 @@
+.top-bar-container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 20px var(--gutter) 0;
+}
+
+.top-bar {
+  --top-bar-height: 72px;
+  --brand-icon-size: 38px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  max-width: calc(var(--page-width) - 96px);
+  min-height: var(--top-bar-height);
+  margin-inline: auto;
+  padding: 10px;
+  padding-left: calc((var(--top-bar-height) - var(--brand-icon-size)) / 2);
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(0 102 255 / 7%);
+  color: var(--blue);
+}
+
+.top-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+.brand-icon {
+  width: var(--brand-icon-size);
+  height: var(--brand-icon-size);
+  object-fit: contain;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.desktop-nav a {
+  padding: 10px;
+  border-radius: 24px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.top-bar .download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  min-height: 48px;
+  padding-inline: 22px;
+  border-radius: 28px;
+  background: var(--action);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.top-bar .download:hover {
+  background: var(--pink);
+  color: var(--ink);
+}
+
+.desktop-nav a:hover, .menu summary:hover, .menu[open] summary {
+  background: var(--cyan);
+  color: var(--ink);
+}
+
+.menu {
+  display: none;
+}
+
+.menu summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu summary span {
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.menu nav {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: min(280px, calc(100vw - 40px));
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(0 102 255 / 10%);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.menu nav > a {
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.menu nav > a:hover {
+  background: var(--cyan);
+  color: var(--ink);
+}
+
+@media (max-width: 1099px) {
+  .top-bar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 8px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 599px) {
+  .top-bar-container {
+    padding: 12px 12px 0;
+  }
+
+  .top-bar {
+    --top-bar-height: 64px;
+    --brand-icon-size: 32px;
+    padding-block: 8px;
+    gap: 4px;
+  }
+
+  .brand {
+    gap: 6px;
+    font-size: 21px;
+  }
+
+  .top-bar .download {
+    min-height: 44px;
+    padding-inline: 14px;
+    font-size: 12px;
+  }
+
+  .menu summary {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 359px) {
+  .top-bar {
+    --brand-icon-size: 28px;
+  }
+
+  .brand {
+    font-size: 18px;
+    gap: 4px;
+  }
+
+  .top-bar .download {
+    padding-inline: 10px;
+  }
+
+  .menu summary {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.language-switch {
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-switch:hover {
+  background: var(--pink);
+  color: var(--ink);
+}
+
+.language-switch:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+@media (max-width: 599px) {
+  .language-switch {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 359px) {
+  .language-switch {
+    width: 36px;
+    height: 36px;
+  }
+}

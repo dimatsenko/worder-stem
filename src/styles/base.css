@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Manrope;
+  src: url("assets/fonts/manrope-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 112px;
+  color-scheme: only light;
+  background-color: #fff;
+  background-image: linear-gradient(to right, rgb(0 102 255 / 10%) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(0 102 255 / 10%) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, summary {
+  touch-action: manipulation;
+}
+
+p, blockquote {
+  text-wrap: pretty;
+}
+
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex="0"]:focus-visible {
+  outline: 3px solid var(--action);
+  outline-offset: 5px;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--blue);
+}
+
+@media (max-width: 599px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

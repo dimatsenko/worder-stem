@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  {{ metadata }}
+  <link rel="stylesheet" href="site.css?v=20261117-card-polish">
+  {{ page_styles }}
+</head>
+<body id="top"{{ body_attributes }}>
+  {% include "components/header.html" %}
+  {{ content }}
+  {% include "components/footer.html" %}
+  <script type="module" src="src/scripts/main.js"></script>
+</body>
+</html>

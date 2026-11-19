@@ -1,0 +1,29 @@
+[
+  {
+    "file": "bober_face.png",
+    "source": "Worder/Assets.xcassets/bober_face.imageset/bober_face.png",
+    "sha256": "7ab4c2b68ab6cb08aa05e7dda5d2f12945242f5a917a89a71b2a63c21f89465e",
+    "dimensions": [
+      972,
+      916
+    ]
+  },
+  {
+    "file": "beaver_chill.png",
+    "source": "Worder/Assets.xcassets/beaver_chill.imageset/beaver_chill.png",
+    "sha256": "4966eba35456fd5d8094cd6142dac3e5f503fef03fef4f9e5121bc619f3474fa",
+    "dimensions": [
+      1726,
+      924
+    ]
+  },
+  {
+    "file": "beaver_paywall.png",
+    "source": "Worder/Assets.xcassets/beaver_paywall.imageset/beaver_paywall.png",
+    "sha256": "a5ccaf989591495961b77bf9c95e624e5be9439b748a0f3b65ca7fe6e1a0ddc1",
+    "dimensions": [
+      1460,
+      1078
+    ]
+  }
+]
